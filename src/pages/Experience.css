@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+/* Keyframes for animations */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+
+.experience {
+  padding: 2em 1em;
+  background-color: var(--bg-color); /* Use background color variable */
+}
+
+.experience h2 {
+  text-align: left; /* Align text to the left */
+  font-size: 2.5em;
+  margin-bottom: 1em;
+  color: #4C4351; /* Use text color variable */
+  font-family: 'Raleway', sans-serif; /* Use Raleway font */
+}
+
+.experience h2 .experience-icon {
+  margin-left: 0.5em;
+  color: var(--accent-color); /* Use accent color variable */
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.experience h2 .experience-icon:hover {
+  transform: scale(1.2);
+}
+
+.experience-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.experience-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1em;
+  background: var(--card-bg); /* Use card background color variable */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--card-shadow); /* Use card shadow color variable */
+  padding: 1.5em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideOutLeft 1s forwards;
+}
+
+.experience-item.slide-in {
+  animation: slideInLeft 1s forwards;
+}
+
+.experience-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--card-shadow); /* Use card shadow color variable */
+}
+
+.experience-item .icon {
+  color: var(--accent-color); /* Use accent color variable */
+}
+
+.experience-item .details {
+  flex: 1;
+}
+
+.experience-item h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  font-family: 'Raleway', sans-serif; /* Use Raleway font */
+  color: var(--text-color); /* Use text color variable */
+}
+
+.experience-item h3 span {
+  font-weight: normal;
+  font-size: 1.2em;
+  color: #999;
+}
+
+.experience-item h4 {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+  color: #777;
+  font-family: 'Raleway', sans-serif; /* Use Raleway font */
+}
+
+.experience-item ul {
+  list-style-type: disc;
+  padding-left: 1.5em;
+  color: var(--text-color); /* Use text color variable */
+  font-family: 'Raleway', sans-serif; /* Use Raleway font */
+}
+
+.experience-item ul li {
+  margin-bottom: 0.5em;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideOutLeft 1s forwards;
+}
+
+.experience-item ul li.slide-in {
+  animation: slideInLeft 1s forwards;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  position: relative;
+  color: #6a5acd; /* Purple color for location in light mode */
+}
+
+.location:hover .map-popup {
+  display: block;
+}
+
+.map-popup {
+  display: none;
+  position: absolute;
+  top: 1.5em;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.stagger-animation {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.stagger-animation.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Dark mode styles */
+body.dark-mode .experience {
+  background-color: var(--bg-dark-color);
+}
+
+body.dark-mode .experience h2 {
+  color: #FFF5EE; /* New light cream color for headings in dark mode */
+}
+
+body.dark-mode .experience-item {
+  background: var(--card-dark-bg);
+  box-shadow: 0 4px 8px var(--card-dark-shadow);
+}
+
+body.dark-mode .experience-item h3, body.dark-mode .experience-item ul, body.dark-mode .experience-item h4 {
+  color: #e0e0e0;
+}
+
+body.dark-mode .experience-item h3 span {
+  color: #ccc;
+}
+
+body.dark-mode .location {
+  color: var(--accent-color);
+}
+
+body.dark-mode .location:hover .map-popup {
+  background: var(--bg-dark-color);
+}

@@ -1,0 +1,68 @@
+/* Add this to ensure the footer stays at the bottom */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  footer {
+    margin-top: auto;
+  }
+  
+  section#contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    background-color: #f9f9f9;
+    flex: 1;
+  }
+  
+  .contact-content {
+    max-width: 50%;
+  }
+  
+  .contact-content h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+  
+  .contact-content p {
+    font-size: 1.2em;
+    margin-top: 0.5em;
+    color: #666;
+  }
+  
+  .contact-info a {
+    display: block;
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 0.5em;
+  }
+  
+  .social-icons {
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+  }
+  
+  .social-icons a {
+    margin-right: 1em;
+  }
+  
+  .social-icons img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .contact-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  

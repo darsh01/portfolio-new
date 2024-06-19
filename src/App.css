@@ -1,0 +1,126 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the body covers the full height of the viewport */
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Ensure the App takes all remaining space */
+}
+
+main {
+  flex: 1; /* This will push the footer to the bottom */
+}
+
+:root {
+  --header-bg: #ffffff;
+  --header-text: #333;
+  --header-logo: #6a5acd;
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --card-border: #e0e0e0;
+  --button-bg: #6a5acd;
+  --button-text: #ffffff;
+  --button-hover-bg: #483d8b;
+  --accent-color: #6a5acd;
+}
+
+body.dark-mode {
+  --header-bg: #1e1e1e;
+  --header-text: #e0e0e0;
+  --header-logo: #1e90ff; /* Dodger Blue */
+  --bg-color: #121212; /* Near-black background */
+  --text-color: #e0e0e0; /* Light gray text */
+  --card-bg: #1e1e1e;
+  --card-shadow: rgba(255, 255, 255, 0.1);
+  --card-border: #444;
+  --button-bg: #1e90ff; /* Dodger Blue */
+  --button-text: #ffffff;
+  --button-hover-bg: #4682b4; /* Steel Blue */
+  --accent-color: #1e90ff; /* Dodger Blue */
+}
+
+header,
+footer {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+}
+
+.project-card {
+  background-color: var(--card-bg);
+  box-shadow: 0 4px 8px var(--card-shadow);
+  border: 1px solid var(--card-border);
+}
+
+.project-card button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+}
+
+.project-card button:hover {
+  background-color: var(--button-hover-bg);
+}
+
+section {
+  width: 100vw; /* Use the full width of the viewport */
+  margin: 0;
+  padding: 0em 0; /* Remove left and right padding */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 1em;
+  color: #4C4351;
+}
+
+footer {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  text-align: center;
+  padding: 1em;
+  width: 100%;
+  margin-top: auto; /* Ensure it stays at the bottom of the page content */
+}
+
+/* Dark mode styles */
+body.dark-mode .projects-section h2,
+body.dark-mode .about-text h1,
+body.dark-mode .experience h2,
+body.dark-mode .what-i-do .description h2,
+body.dark-mode .contact-content h2 {
+  color: #E2DFD2; /* New light cream color for headings in dark mode */
+}
+
+/* Change the icon logo in the About section to the same color as the contact me button in dark mode */
+body.dark-mode .social-icons a {
+  color: var(--button-bg); /* Blue color for social links in dark mode */
+}
+
+body.dark-mode .social-icons a:hover {
+  color: var(--button-hover-bg); /* Lighter blue on hover */
+}
+
+/* Change the icon logo of phone and email in the Contact me section to the same color as the GitHub logo in light mode */
+.contact-info p svg {
+  color: #6a5acd; /* Purple color for icons */
+}
+
+body.dark-mode .contact-info p svg {
+  color: var(--button-bg); /* Blue icons in dark mode */
+}

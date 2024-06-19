@@ -1,0 +1,197 @@
+/* General styles */
+.contact-me {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4em 2em;
+  background-color: white;
+}
+
+.contact-content {
+  flex: 1;
+  margin-right: 2em;
+  font-family: 'Raleway', sans-serif;
+  color: #555; /* Default text color */
+}
+
+.contact-content h2 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  color: #4C4351;
+}
+
+.contact-content h3 {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s, transform 0.3s;
+  opacity: 1;
+  transform-origin: center center;
+  color: #555; /* Initial gray color */
+}
+
+.contact-content h3.loud-effect {
+  animation: loudEffect 2.2s ease-in-out forwards;
+}
+
+@keyframes loudEffect {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+    color: #6a5acd; /* Start with purple color */
+  }
+  50% {
+    opacity: 1;
+    transform: scale(2.5) translate(50%, -50%); /* Enlarge and move towards the right */
+    color: #6a5acd; /* Purple color during enlargement */
+  }
+  100% {
+    transform: scale(1) translate(0, 0); /* Return to normal size */
+    color: #555; /* Change to gray color */
+  }
+}
+
+.contact-content p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  color: #555;
+}
+
+.contact-info p {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info p svg {
+  margin-right: 0.5em;
+  color: #6a5acd; /* Purple color for icons */
+}
+
+.social-links {
+  display: flex;
+  gap: 1em;
+}
+
+.social-links a {
+  color: #6a5acd;
+  font-size: 2em;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+  color: #483d8b;
+  transform: scale(1.1);
+}
+
+.contact-image img {
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.hover-effect {
+  font-size: 1.2em;
+  color: #555;
+  transition: color 0.3s;
+}
+
+.hover-effect:hover {
+  color: #6a5acd; /* Change to purple on hover in light mode */
+}
+
+.handshake-icon {
+  margin-left: 0.5em;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.hover-effect:hover .handshake-icon {
+  color: #6a5acd; /* Change to purple on hover in light mode */
+  transform: scale(1.2);
+  transform: rotate(20deg);
+}
+
+@media (max-width: 768px) {
+  .contact-me {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-content {
+    margin-right: 0;
+    margin-bottom: 2em;
+  }
+
+  .contact-image img {
+    width: 400px;
+  }
+}
+
+/* Dark mode styles */
+body.dark-mode .contact-me {
+  background-color: var(--bg-color);
+}
+
+body.dark-mode .contact-content {
+  color: #e0e0e0; /* Lighter text color for dark mode */
+}
+
+body.dark-mode .contact-content h2 {
+  color: #e0e0e0; /* Lighter heading color for dark mode */
+}
+
+body.dark-mode .contact-content h3 {
+  color: var(--text-color); /* Initial gray color */
+}
+
+body.dark-mode .contact-content h3:hover {
+  color: var(--button-hover-bg); /* Lighter blue on hover */
+}
+
+body.dark-mode .contact-content h3.loud-effect {
+  animation: loudEffectDark 2.2s ease-in-out forwards;
+}
+
+@keyframes loudEffectDark {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+    color: var(--button-bg); /* Start with blue color */
+  }
+  50% {
+    opacity: 1;
+    transform: scale(2.5) translate(50%, -50%); /* Enlarge and move towards the right */
+    color: var(--button-bg); /* Blue color during enlargement */
+  }
+  100% {
+    transform: scale(1) translate(0, 0); /* Return to normal size */
+    color: var(--text-color); /* Change to gray color */
+  }
+}
+
+body.dark-mode .contact-content p {
+  color: #e0e0e0; /* Lighter text color for paragraphs */
+}
+
+body.dark-mode .contact-info p svg {
+  color: var(--button-bg); /* Blue icons in dark mode */
+}
+
+body.dark-mode .social-links a {
+  color: var(--button-bg); /* Blue color for social links in dark mode */
+}
+
+body.dark-mode .social-links a:hover {
+  color: var(--button-hover-bg); /* Lighter blue on hover */
+}
+
+body.dark-mode .hover-effect:hover {
+  color: var(--button-hover-bg); /* Lighter blue on hover for dark mode */
+}
+
+body.dark-mode .hover-effect:hover .handshake-icon {
+  color: var(--button-hover-bg); /* Lighter blue on hover for the icon */
+}

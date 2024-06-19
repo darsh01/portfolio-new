@@ -1,0 +1,212 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes staggerFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes staggerFadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.what-i-do {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 1em;
+  background-color: var(--bg-color);
+  width: 100%;
+}
+
+.what-i-do-content {
+  display: flex;
+  max-width: 1600px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  opacity: 1; /* Start visible */
+  transition: opacity 1.5s ease-out; /* Slow down transition */
+}
+
+.illustration {
+  flex: 1.5;
+  opacity: 0; /* Start hidden */
+  transition: opacity 1.5s ease-out;
+}
+
+.illustration.fade-in {
+  animation: fadeIn 1.5s forwards;
+}
+
+.illustration.fade-out {
+  animation: fadeOut 1.5s forwards;
+}
+
+.illustration img {
+  max-width: 100%;
+  height: auto;
+}
+
+.description {
+  flex: 2;
+  padding: 0 2em;
+  color: var(--text-color);
+}
+
+.description h2 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: 'Raleway', sans-serif;
+}
+
+.description h2 .what-i-do-icon {
+  color: var(--text-color); /* Default color */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.description h2:hover .what-i-do-icon {
+  transform: scale(1.2);
+  color: var(--accent-color); /* Hover color */
+}
+
+.description p {
+  font-size: 1.5em;
+  color: var(--text-color);
+  margin-bottom: 1.5em;
+  font-family: 'Raleway', sans-serif;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  margin-bottom: 2em;
+}
+
+.tech {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.tech svg {
+  margin-bottom: 0.5em;
+  transition: transform 0.3s ease;
+}
+
+/* Show original color of icons */
+.tech-python svg {
+  color: #3776AB; /* Python blue */
+}
+
+.tech-js svg {
+  color: #F7DF1E; /* JavaScript yellow */
+}
+
+.tech-react svg {
+  color: #61DAFB; /* React blue */
+}
+
+.tech-nodejs svg {
+  color: #339933; /* NodeJS green */
+}
+
+.tech-sql svg {
+  color: #4479A1; /* SQL blue */
+}
+
+.tech-linux svg {
+  color: #FCC624; /* Linux yellow */
+}
+
+.tech-aws svg {
+  color: #FF9900; /* AWS orange */
+}
+
+.tech-firebase svg {
+  color: #FFCA28; /* Firebase yellow */
+}
+
+.tech-docker svg {
+  color: #2496ED; /* Docker blue */
+}
+
+.tech-tensorflow svg {
+  color: #FF6F00; /* TensorFlow orange */
+}
+
+.tech-kubernetes svg {
+  color: #326CE5; /* Kubernetes blue */
+}
+
+.tech-spring svg {
+  color: #6DB33F; /* Spring green */
+}
+
+.tech-django svg {
+  color: #092E20; /* Django green */
+}
+
+.tech:hover svg {
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+.services {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2em;
+  font-family: 'Raleway', sans-serif;
+}
+
+.services li {
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  color: var(--text-color);
+  opacity: 0; /* Start hidden */
+  transform: translateY(20px); /* Start with a slight downward translation */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.services li.stagger-fade-in {
+  animation: staggerFadeIn 1s forwards;
+}
+
+.services li.stagger-fade-out {
+  animation: staggerFadeOut 1s forwards;
+}

@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+/* Keyframes for shaking animation */
+@keyframes shake {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  50% { transform: rotate(20deg); }
+  75% { transform: rotate(-10deg); }
+}
+
+.projects-section {
+  padding: 2em 1em;
+  background-color: var(--bg-color); /* Use background color variable */
+  font-family: 'Raleway', sans-serif; /* Use Raleway font */
+}
+
+.projects-section h2 {
+  text-align: center;
+  margin-bottom: 1.5em;
+  color: #4C4351; /* Use text color variable */
+  font-family: 'Raleway', sans-serif; /* Use Raleway font */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.projects-icon {
+  color: var(--accent-color); /* Use accent color variable */
+  animation: shake 2s infinite;
+  transform-origin: 70% 70%;
+}
+
+.projects-carousel-container {
+  display: flex;
+  align-items: center;
+}
+
+.scroll-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  z-index: 2;
+}
+
+.arrow-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--button-bg); /* Use button background color variable */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+.arrow-circle:hover {
+  transform: scale(1.1);
+}
+
+.arrow {
+  color: var(--button-text); /* Use button text color variable */
+  font-size: 1.5em;
+}
+
+.projects-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 2em;
+  scroll-behavior: smooth;
+  padding: 0 2em;
+}
+
+.project-card {
+  background-color: var(--card-bg); /* Use card background color variable */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--card-shadow); /* Use card shadow color variable */
+  overflow: hidden;
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex: 0 0 auto;
+  border: 1px solid var(--card-border); /* Use card border color variable */
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--card-shadow); /* Use card shadow color variable */
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  margin: 1em 0 0.5em;
+  font-size: 1.5em;
+  color: var(--text-color); /* Use text color variable */
+  font-family: 'Raleway', sans-serif; /* Use Raleway font */
+}
+
+.project-card p {
+  padding: 0 1em;
+  margin-bottom: 1em;
+  color: var(--text-color); /* Use text color variable */
+  font-family: 'Raleway', sans-serif; /* Use Raleway font */
+}
+
+.read-more-button {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 50px;
+}
+
+.project-card button {
+  background-color: var(--button-bg); /* Use button background color variable */
+  border: none;
+  color: var(--button-text); /* Use button text color variable */
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.project-card button:hover {
+  background-color: var(--button-hover-bg); /* Use button hover background color variable */
+}
+
+.project-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85); /* Updated background for better visibility in dark mode */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.popup-content {
+  background-color: var(--card-bg); /* Use card background color variable */
+  padding: 2em;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  animation: projectSlideIn 0.5s;
+  color: var(--text-color); /* Ensure text color matches theme */
+  font-family: 'Raleway', sans-serif; /* Use Raleway font */
+}
+
+@keyframes projectSlideIn {
+  from { transform: translateY(50px); }
+  to { transform: translateY(0); }
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.close-icon {
+  cursor: pointer;
+  font-size: 1.5em;
+  color: var(--text-color); /* Use text color variable */
+}
+
+.tech-stack {
+  margin-top: 1em;
+}
+
+.tech-stack h4 {
+  margin-bottom: 0.5em;
+  color: var(--text-color); /* Use text color variable */
+  font-family: 'Raleway', sans-serif; /* Use Raleway font */
+}
+
+.tech-stack ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tech-stack li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5em;
+  color: var(--text-color); /* Use text color variable */
+  font-family: 'Raleway', sans-serif; /* Use Raleway font */
+}
+
+.tech-stack span {
+  margin-right: 0.5em;
+}
+
+.progress-bar {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  flex-grow: 1;
+  height: 8px;
+  position: relative;
+}
+
+.progress {
+  background: linear-gradient(to right, #1e90ff, #4682b4); /* Use gradient with accent colors */
+  height: 100%;
+  border-radius: 5px;
+  transition: width 1s ease-in-out;
+}
+
+.tags {
+  margin-top: 1em;
+}
+
+.tag {
+  display: inline-block;
+  background-color: var(--accent-color); /* Use accent color variable */
+  color: var(--button-text); /* Use button text color variable */
+  padding: 0.3em 0.5em;
+  border-radius: 5px;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tag:hover {
+  background-color: var(--button-hover-bg); /* Use button hover background color variable */
+}
+
+.view-project-link {
+  display: inline-block;
+  margin-top: 1.5em;
+  color: var(--accent-color); /* Use accent color variable */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+  text-align: center;
+  width: 100%;
+}
+
+.view-project-link:hover {
+  color: #4682b4; /* Steel Blue */
+}
+
+body.dark-mode .projects-section {
+  background-color: var(--bg-dark-color);
+}
+
+body.dark-mode .projects-section h2, body.dark-mode .project-card h3, body.dark-mode .project-card p, body.dark-mode .tech-stack h4, body.dark-mode .tech-stack li {
+  color: #FFF5EE; /* Light cream color in dark mode */
+}
+
+body.dark-mode .popup-content {
+  background-color: var(--card-dark-bg);
+  box-shadow: 0 4px 8px var(--card-dark-shadow);
+}

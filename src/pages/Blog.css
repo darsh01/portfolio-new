@@ -1,0 +1,23 @@
+section#blog {
+    padding: 2em;
+    background-color: #f9f9f9;
+  }
+  
+  #blog h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+  
+  .blog-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .blog-item {
+    flex: 1 1 45%;
+    margin: 1em;
+    padding: 1em;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  

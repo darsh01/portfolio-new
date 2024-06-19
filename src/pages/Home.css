@@ -1,0 +1,16 @@
+section#home {
+    padding: 2em 0; /* Adjust padding as needed */
+    text-align: center;
+    background-color: #ffffff;
+  }
+  /* Home.css */
+
+section#home {
+  padding: 1.8em 0;
+  text-align: center;
+  background-color: var(--bg-color);
+}
+
+.home-content {
+  color: var(--text-color);
+}

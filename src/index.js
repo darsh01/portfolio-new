@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+document.title = "DM | Darsh Maniar"; // Set the document title
 root.render(
   <React.StrictMode>
     <App />

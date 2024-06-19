@@ -6,7 +6,7 @@ const projects = [
   {
     title: "Stock Market Prediction",
     description: "The Stock Market Predictor model leverages LSTM and time series analysis to forecast market trends with high accuracy.",
-    img: "/Stockmarket.jpeg", // replace with actual image path
+    img: "./Stockmarket.jpeg", // replace with actual image path
     repo: "https://github.com/darsh01/Stock-Market-Prediction-Using-Machine-Learning-LSTM-Model-",
     detailedDescription: `
 A comprehensive stock market prediction project was designed and implemented using machine learning techniques, focusing on Long Short-Term Memory (LSTM) networks. The primary objective of this project is to predict stock market trends with high accuracy through the application of Time Series Analysis. The model was applied to the TATA Beverage dataset from the National Stock Exchange, achieving a notable prediction accuracy of 89% by optimizing the architecture, particularly through strategic adjustments in hidden layers and epochs.
@@ -22,7 +22,7 @@ Trained and evaluated the model on historical data, achieving high prediction ac
   {
     title: "Github Rater",
     description: "GitHub Rater analyzes and scores GitHub profiles to help users improve their coding presence and engagement.",
-    img: "/GithubRater.jpeg", // replace with actual image path
+    img: "./GithubRater.jpeg", // replace with actual image path
     repo: "https://github.com/darsh01/gh-rater",
     detailedDescription: `
 Built "RateMyGit," a React-based single-page application leveraging GitHub’s GraphQL API for detailed analysis of metrics including repository activities, star counts, forks, and follower engagement, improving data processing efficiency. Formulated a multifaceted scoring system assessing GitHub profiles across User Popularity, Biography Quality, and Repository Quality, leading to an estimated 30% increase in user interaction with profile features.
@@ -40,7 +40,7 @@ Displayed diagnostic information for a general profile overview, which does not 
   {
     title: "FUNLANG Programming Language",
     description: "Funlang simplifies coding with its intuitive syntax and robust parsing and evaluation features.",
-    img: "/Programming.avif", // replace with actual image path
+    img: "./Programming.avif", // replace with actual image path
     repo: "https://github.com/Sdunga1/SER502-Funlang-Team29",
     detailedDescription: `
 Build FUNLANG – a programming language designed to make writing code simpler, intuitive, and, most importantly, fun with every line of code. Funlang features a clear and structured approach to parsing and evaluating code, ensuring an enjoyable programming experience.
@@ -57,7 +57,7 @@ Supported data types: Integer, Character, String, Boolean, with operations inclu
   {
     title: "Sorting Visualization Algorithms",
     description: "Sorting Visualizer algorithm tool brings sorting algorithms to life with interactive animations and adjustable speeds.",
-    img: "/Sort.png", // replace with actual image path
+    img: "./Sort.png", // replace with actual image path
     repo: "https://github.com/darsh01/Sorting-Algorithms",
     detailedDescription: `
 A comprehensive Sorting Visualization Algorithm project was designed and implemented using Python’s Tkinter, focusing on Quick sort, Heap sort, and Merge sort algorithms. The primary goal of this project is to enhance user engagement and comprehension by integrating adjustable animation speeds into the visualizations. This interactive tool is specifically designed to aid students and enthusiasts in understanding and comparing different sorting algorithms through dynamic and engaging visual displays.
@@ -74,7 +74,7 @@ Sorting algorithm execution is controlled by the Startalgorithm function, which 
   {
     title: "VibeCheck for Twitter",
     description: "This project uses NLP techniques to analyze and classify sentiments from over 10,000 tweets, providing valuable insights.",
-    img: "/Sentimental.png", // replace with actual image path
+    img: "./Sentimental.png", // replace with actual image path
     repo: "https://github.com/darsh01/Twitter-Sentimental-Analysis",
     detailedDescription: `
 Leveraged NLTK and TextBlob within Python to conduct sentiment analysis on over 10,000 tweets, demonstrating expertise in utilizing various NLP techniques and programming skills for large-scale data analysis. Classified tweets into positive, negative, and neutral sentiments, enabling detailed sentiment insights and improving the ability to translate complex data into actionable categories for strategic decision-making by at least 40%.
@@ -90,7 +90,7 @@ Improved the ability to translate complex data into actionable insights, enhanci
   {
     title: "Scrum Simulation Application",
     description: "This Scrum Simulator enhances team collaboration with integrated task management and user story tracking.",
-    img: "/Scrum.jpeg", // replace with actual image path
+    img: "./Scrum.jpeg", // replace with actual image path
     repo: "https://github.com/jkpate11/Group_Chaurasia_ser515",
     detailedDescription: `
 Crafted a Scrum Simulator Application to improve team collaboration by using PostgreSQL for database integrity and Java with Gradle for backend development. Integrated task sorting and user story tracking into a Scrum tool, boosting operational efficiency by 25% with Spring Boot and designing the UI with JavaFX.
@@ -107,7 +107,7 @@ Ensured seamless interaction between different components, leveraging the streng
   {
     title: "TicTacToe Project",
     description: "A Tic Tac Toe game that offers an engaging digital experience with a sleek GUI and smart game logic.",
-    img: "/Tick.png", // replace with actual image path
+    img: "./Tick.png", // replace with actual image path
     repo: "https://github.com/darsh01/TicTacToeProject",
     detailedDescription: `
 Developed an interactive Tic Tac Toe game using Java, incorporating a graphical user interface (GUI) with Swing. The project showcases skills in GUI design, event handling, and game logic implementation, providing an engaging user experience.

@@ -42,7 +42,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2em 1em;
+  padding: 4em 1em;
   background-color: var(--bg-color);
   width: 100%;
 }
@@ -54,13 +54,13 @@
   justify-content: space-between;
   align-items: center;
   gap: 2em;
-  opacity: 1; /* Start visible */
-  transition: opacity 1.5s ease-out; /* Slow down transition */
+  opacity: 1;
+  transition: opacity 1.5s ease-out;
 }
 
 .illustration {
   flex: 1.5;
-  opacity: 0; /* Start hidden */
+  opacity: 0;
   transition: opacity 1.5s ease-out;
 }
 
@@ -93,13 +93,13 @@
 }
 
 .description h2 .what-i-do-icon {
-  color: var(--text-color); /* Default color */
+  color: var(--text-color);
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .description h2:hover .what-i-do-icon {
   transform: scale(1.2);
-  color: var(--accent-color); /* Hover color */
+  color: var(--accent-color);
 }
 
 .description p {
@@ -128,61 +128,60 @@
   transition: transform 0.3s ease;
 }
 
-/* Show original color of icons */
 .tech-python svg {
-  color: #3776AB; /* Python blue */
+  color: #3776AB;
 }
 
 .tech-js svg {
-  color: #F7DF1E; /* JavaScript yellow */
+  color: #F7DF1E;
 }
 
 .tech-react svg {
-  color: #61DAFB; /* React blue */
+  color: #61DAFB;
 }
 
 .tech-nodejs svg {
-  color: #339933; /* NodeJS green */
+  color: #339933;
 }
 
 .tech-sql svg {
-  color: #4479A1; /* SQL blue */
+  color: #4479A1;
 }
 
 .tech-linux svg {
-  color: #FCC624; /* Linux yellow */
+  color: #FCC624;
 }
 
 .tech-aws svg {
-  color: #FF9900; /* AWS orange */
+  color: #FF9900;
 }
 
 .tech-firebase svg {
-  color: #FFCA28; /* Firebase yellow */
+  color: #FFCA28;
 }
 
 .tech-docker svg {
-  color: #2496ED; /* Docker blue */
+  color: #2496ED;
 }
 
 .tech-tensorflow svg {
-  color: #FF6F00; /* TensorFlow orange */
+  color: #FF6F00;
 }
 
 .tech-kubernetes svg {
-  color: #326CE5; /* Kubernetes blue */
+  color: #326CE5;
 }
 
 .tech-spring svg {
-  color: #6DB33F; /* Spring green */
+  color: #6DB33F;
 }
 
 .tech-django svg {
-  color: #092E20; /* Django green */
+  color: #092E20;
 }
 
 .tech:hover svg {
-  transform: scale(1.1); /* Scale up on hover */
+  transform: scale(1.1);
 }
 
 .services {
@@ -198,8 +197,8 @@
   align-items: center;
   gap: 0.5em;
   color: var(--text-color);
-  opacity: 0; /* Start hidden */
-  transform: translateY(20px); /* Start with a slight downward translation */
+  opacity: 0;
+  transform: translateY(20px);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
@@ -209,4 +208,35 @@
 
 .services li.stagger-fade-out {
   animation: staggerFadeOut 1s forwards;
+}
+
+@media (max-width: 768px) {
+  .what-i-do {
+    padding: 2em 1em;
+  }
+
+  .what-i-do-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .illustration img {
+    width: 80%;
+  }
+
+  .description h2 {
+    font-size: 2em;
+  }
+
+  .description p {
+    font-size: 1em;
+  }
+
+  .services {
+    font-size: 1em;
+  }
+
+  .tech svg {
+    font-size: 30px;
+  }
 }

@@ -10,18 +10,18 @@ body {
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; /* Ensure the body covers the full height of the viewport */
 }
 
 .App {
   text-align: center;
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex: 1; /* Ensure the App takes all remaining space */
 }
 
 main {
-  flex: 1;
+  flex: 1; /* This will push the footer to the bottom */
 }
 
 :root {
@@ -42,16 +42,16 @@ main {
 body.dark-mode {
   --header-bg: #1e1e1e;
   --header-text: #e0e0e0;
-  --header-logo: #1e90ff;
-  --bg-color: #121212;
-  --text-color: #e0e0e0;
+  --header-logo: #1e90ff; /* Dodger Blue */
+  --bg-color: #121212; /* Near-black background */
+  --text-color: #e0e0e0; /* Light gray text */
   --card-bg: #1e1e1e;
   --card-shadow: rgba(255, 255, 255, 0.1);
   --card-border: #444;
-  --button-bg: #1e90ff;
+  --button-bg: #1e90ff; /* Dodger Blue */
   --button-text: #ffffff;
-  --button-hover-bg: #4682b4;
-  --accent-color: #1e90ff;
+  --button-hover-bg: #4682b4; /* Steel Blue */
+  --accent-color: #1e90ff; /* Dodger Blue */
 }
 
 header,
@@ -76,10 +76,10 @@ footer {
 }
 
 section {
-  width: 100vw;
+  width: 100vw; /* Use the full width of the viewport */
   margin: 0;
-  padding: 4em 0;
-  box-sizing: border-box;
+  padding: 0em 0; /* Remove left and right padding */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
 }
 
 section h2 {
@@ -95,7 +95,7 @@ footer {
   text-align: center;
   padding: 1em;
   width: 100%;
-  margin-top: auto;
+  margin-top: auto; /* Ensure it stays at the bottom of the page content */
 }
 
 /* Dark mode styles */
@@ -104,24 +104,23 @@ body.dark-mode .about-text h1,
 body.dark-mode .experience h2,
 body.dark-mode .what-i-do .description h2,
 body.dark-mode .contact-content h2 {
-  color: #E2DFD2;
+  color: #E2DFD2; /* New light cream color for headings in dark mode */
 }
 
+/* Change the icon logo in the About section to the same color as the contact me button in dark mode */
 body.dark-mode .social-icons a {
-  color: var(--button-bg);
+  color: var(--button-bg); /* Blue color for social links in dark mode */
 }
 
 body.dark-mode .social-icons a:hover {
-  color: var(--button-hover-bg);
+  color: var(--button-hover-bg); /* Lighter blue on hover */
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  section {
-    padding: 2em 1em;
-  }
+/* Change the icon logo of phone and email in the Contact me section to the same color as the GitHub logo in light mode */
+.contact-info p svg {
+  color: #6a5acd; /* Purple color for icons */
+}
 
-  section h2 {
-    font-size: 2em;
-  }
+body.dark-mode .contact-info p svg {
+  color: var(--button-bg); /* Blue icons in dark mode */
 }

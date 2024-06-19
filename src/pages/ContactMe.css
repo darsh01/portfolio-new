@@ -1,3 +1,4 @@
+/* General styles */
 .contact-me {
   display: flex;
   justify-content: space-between;
@@ -10,7 +11,7 @@
   flex: 1;
   margin-right: 2em;
   font-family: 'Raleway', sans-serif;
-  color: #555;
+  color: #555; /* Default text color */
 }
 
 .contact-content h2 {
@@ -27,7 +28,7 @@
   transition: color 0.3s, transform 0.3s;
   opacity: 1;
   transform-origin: center center;
-  color: #555;
+  color: #555; /* Initial gray color */
 }
 
 .contact-content h3.loud-effect {
@@ -38,16 +39,16 @@
   0% {
     opacity: 0;
     transform: scale(1);
-    color: #6a5acd;
+    color: #6a5acd; /* Start with purple color */
   }
   50% {
     opacity: 1;
-    transform: scale(2.5) translate(50%, -50%);
-    color: #6a5acd;
+    transform: scale(2.5) translate(50%, -50%); /* Enlarge and move towards the right */
+    color: #6a5acd; /* Purple color during enlargement */
   }
   100% {
-    transform: scale(1) translate(0, 0);
-    color: #555;
+    transform: scale(1) translate(0, 0); /* Return to normal size */
+    color: #555; /* Change to gray color */
   }
 }
 
@@ -66,7 +67,7 @@
 
 .contact-info p svg {
   margin-right: 0.5em;
-  color: #6a5acd;
+  color: #6a5acd; /* Purple color for icons */
 }
 
 .social-links {
@@ -98,7 +99,7 @@
 }
 
 .hover-effect:hover {
-  color: #6a5acd;
+  color: #6a5acd; /* Change to purple on hover in light mode */
 }
 
 .handshake-icon {
@@ -107,7 +108,7 @@
 }
 
 .hover-effect:hover .handshake-icon {
-  color: #6a5acd;
+  color: #6a5acd; /* Change to purple on hover in light mode */
   transform: scale(1.2);
   transform: rotate(20deg);
 }
@@ -125,40 +126,29 @@
   }
 
   .contact-image img {
-    width: 100%;
-  }
-
-  .contact-content h2 {
-    font-size: 2em;
-  }
-
-  .contact-content h3, .contact-content p, .contact-info p {
-    font-size: 1em;
-  }
-
-  .social-links a {
-    font-size: 1.5em;
+    width: 400px;
   }
 }
 
+/* Dark mode styles */
 body.dark-mode .contact-me {
   background-color: var(--bg-color);
 }
 
 body.dark-mode .contact-content {
-  color: #e0e0e0;
+  color: #e0e0e0; /* Lighter text color for dark mode */
 }
 
 body.dark-mode .contact-content h2 {
-  color: #e0e0e0;
+  color: #e0e0e0; /* Lighter heading color for dark mode */
 }
 
 body.dark-mode .contact-content h3 {
-  color: var(--text-color);
+  color: var(--text-color); /* Initial gray color */
 }
 
 body.dark-mode .contact-content h3:hover {
-  color: var(--button-hover-bg);
+  color: var(--button-hover-bg); /* Lighter blue on hover */
 }
 
 body.dark-mode .contact-content h3.loud-effect {
@@ -169,39 +159,39 @@ body.dark-mode .contact-content h3.loud-effect {
   0% {
     opacity: 0;
     transform: scale(1);
-    color: var(--button-bg);
+    color: var(--button-bg); /* Start with blue color */
   }
   50% {
     opacity: 1;
-    transform: scale(2.5) translate(50%, -50%);
-    color: var(--button-bg);
+    transform: scale(2.5) translate(50%, -50%); /* Enlarge and move towards the right */
+    color: var(--button-bg); /* Blue color during enlargement */
   }
   100% {
-    transform: scale(1) translate(0, 0);
-    color: var(--text-color);
+    transform: scale(1) translate(0, 0); /* Return to normal size */
+    color: var(--text-color); /* Change to gray color */
   }
 }
 
 body.dark-mode .contact-content p {
-  color: #e0e0e0;
+  color: #e0e0e0; /* Lighter text color for paragraphs */
 }
 
 body.dark-mode .contact-info p svg {
-  color: var(--button-bg);
+  color: var(--button-bg); /* Blue icons in dark mode */
 }
 
 body.dark-mode .social-links a {
-  color: var(--button-bg);
+  color: var(--button-bg); /* Blue color for social links in dark mode */
 }
 
 body.dark-mode .social-links a:hover {
-  color: var(--button-hover-bg);
+  color: var(--button-hover-bg); /* Lighter blue on hover */
 }
 
 body.dark-mode .hover-effect:hover {
-  color: var(--button-hover-bg);
+  color: var(--button-hover-bg); /* Lighter blue on hover for dark mode */
 }
 
 body.dark-mode .hover-effect:hover .handshake-icon {
-  color: var(--button-hover-bg);
+  color: var(--button-hover-bg); /* Lighter blue on hover for the icon */
 }

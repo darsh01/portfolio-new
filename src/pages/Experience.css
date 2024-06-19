@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
 
+/* Keyframes for animations */
 @keyframes slideInLeft {
   0% {
     opacity: 0;
@@ -23,21 +24,21 @@
 }
 
 .experience {
-  padding: 4em 1em;
-  background-color: var(--bg-color);
+  padding: 2em 1em;
+  background-color: var(--bg-color); /* Use background color variable */
 }
 
 .experience h2 {
-  text-align: left;
+  text-align: left; /* Align text to the left */
   font-size: 2.5em;
   margin-bottom: 1em;
-  color: #4C4351;
-  font-family: 'Raleway', sans-serif;
+  color: #4C4351; /* Use text color variable */
+  font-family: 'Raleway', sans-serif; /* Use Raleway font */
 }
 
 .experience h2 .experience-icon {
   margin-left: 0.5em;
-  color: var(--accent-color);
+  color: var(--accent-color); /* Use accent color variable */
   vertical-align: middle;
   transition: transform 0.3s ease;
 }
@@ -56,9 +57,9 @@
   display: flex;
   align-items: flex-start;
   gap: 1em;
-  background: var(--card-bg);
+  background: var(--card-bg); /* Use card background color variable */
   border-radius: 10px;
-  box-shadow: 0 4px 8px var(--card-shadow);
+  box-shadow: 0 4px 8px var(--card-shadow); /* Use card shadow color variable */
   padding: 1.5em;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   opacity: 0;
@@ -72,11 +73,11 @@
 
 .experience-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px var(--card-shadow);
+  box-shadow: 0 8px 16px var(--card-shadow); /* Use card shadow color variable */
 }
 
 .experience-item .icon {
-  color: var(--accent-color);
+  color: var(--accent-color); /* Use accent color variable */
 }
 
 .experience-item .details {
@@ -86,8 +87,8 @@
 .experience-item h3 {
   font-size: 1.5em;
   margin-bottom: 0.5em;
-  font-family: 'Raleway', sans-serif;
-  color: var(--text-color);
+  font-family: 'Raleway', sans-serif; /* Use Raleway font */
+  color: var(--text-color); /* Use text color variable */
 }
 
 .experience-item h3 span {
@@ -100,14 +101,14 @@
   font-size: 1.2em;
   margin-bottom: 0.5em;
   color: #777;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif; /* Use Raleway font */
 }
 
 .experience-item ul {
   list-style-type: disc;
   padding-left: 1.5em;
-  color: var(--text-color);
-  font-family: 'Raleway', sans-serif;
+  color: var(--text-color); /* Use text color variable */
+  font-family: 'Raleway', sans-serif; /* Use Raleway font */
 }
 
 .experience-item ul li {
@@ -126,7 +127,7 @@
   align-items: center;
   gap: 0.5em;
   position: relative;
-  color: #6a5acd;
+  color: #6a5acd; /* Purple color for location in light mode */
 }
 
 .location:hover .map-popup {
@@ -156,12 +157,13 @@
   transform: translateX(0);
 }
 
+/* Dark mode styles */
 body.dark-mode .experience {
   background-color: var(--bg-dark-color);
 }
 
 body.dark-mode .experience h2 {
-  color: #FFF5EE;
+  color: #FFF5EE; /* New light cream color for headings in dark mode */
 }
 
 body.dark-mode .experience-item {
@@ -183,28 +185,4 @@ body.dark-mode .location {
 
 body.dark-mode .location:hover .map-popup {
   background: var(--bg-dark-color);
-}
-
-@media (max-width: 768px) {
-  .experience {
-    padding: 2em 1em;
-  }
-
-  .experience h2 {
-    font-size: 2em;
-  }
-
-  .experience-content {
-    gap: 1em;
-  }
-
-  .experience-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .experience-item h3, .experience-item h4, .experience-item ul {
-    text-align: center;
-  }
 }

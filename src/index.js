@@ -4,8 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Set the document title
+document.title = "Darsh Maniar";
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-document.title = "👨‍💻 Darsh Maniar"; // Set the document title
 root.render(
   <React.StrictMode>
     <App />

@@ -76,7 +76,7 @@ const WhatIDo = () => {
     <section className="what-i-do" ref={ref}>
       <div className="what-i-do-content">
         <div className="illustration" ref={illustrationRef}>
-          <img src="public/What.gif" alt="Illustration" />
+          <img src="./WhatI.gif" alt="Illustration" />
         </div>
         <div className="description">
           <h2>

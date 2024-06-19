@@ -24,7 +24,7 @@ const ContactMe = () => {
         </div>
       </div>
       <div className="contact-image">
-        <img src="/Contact.png" alt="Contact Illustration" />
+        <img src="./Contact.png" alt="Contact Illustration" />
       </div>
     </section>
   );
